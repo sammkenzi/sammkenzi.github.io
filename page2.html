@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Page 2</title>
+      <meta charset="utf-8">
+      <!-- Prevent smartphones from scaling pages down -->
+      <meta name="viewport" content="initial-scale=1">
+      <!-- <link rel="stylesheet" href="medium.css"> -->
+      <!-- Media query for full browser width -->
+      <link rel="stylesheet" media="screen and (min-width: 481px)" href="large.css">
+      <!-- Media query for narrow browser width -->
+      <link rel="stylesheet" media="screen and (max-width: 480px)" href="small.css">
+      <!-- Adapted from http://www.gt3themes.com/ -->
+      <style> 
+         .main-header {
+         background: url("imgs/glacier.jpg") no-repeat center; 
+         background-size: cover;
+         }
+      </style>
+   </head>
+   <body>
+      <ul class="nav-bar">
+         <li class="nav-bar-list"><a class="nav-bar-link" href="index.html">Home</a></li>
+         <li class="nav-bar-list"><a class="nav-bar-link" href="page1.html">About Me</a></li>
+         <li class="nav-bar-list">
+            <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Travel Blogs</button>
+               <div id="myDropdown" class="dropdown-content">
+                  <a href="page2.html">Alaska</a>
+                  <a href="page3.html">Russia</a>
+                  <a href="page4.html">Estonia</a>
+                  <a href="page5.html">Jamaica</a>
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="main-header">
+         <h1>Alaska</h1>
+      </div>
+      <p class="content">
+         In May of 2016, I visited Ketchikan, Alaska with my family. Everyone always thinks of Alaska as being extremely cold. However, since we traveled in the spring, the tempature was in the mid-sixties and sunny. We traveled to Alaska by cruiseline. The view, when we first stepped off the ship, was breathtaking. There were huge mountains located right next to the small, port village we arrived at.
+      </p>
+      <p class="subheading">
+         We did many different activities in Alaska. First, we went on a guided hike through the mountains. Here we saw enormous trees and lots of wildlife, such as, black bears. We actually saw a black bear walking with it's two cubs near a small stream. Afterwards, we went on a hike to see the Mendenhall Glacier. This was the first time I'd ever seen a glacier. It looked like a huge mound of ice wedged between two mountains. The glacier emptied out into a lake with pebbles around the edges. The mountain we saw the glacier from featured a massive waterfall. Overall, Alaska was a beautiful place to visit for wildlife and the scenery. It was like nothing I had ever seen before.
+      </p>
+      <div class="box">
+         <div class="pictures">
+            <img src="imgs/ketchikan.jpg" alt="Ketchikan">
+            <p>Ketchikan Village</p>
+         </div>
+         <div class="pictures">
+            <img src="imgs/mountains.jpg" alt="Mountains">
+            <p>Dude Mountain, Ketchikan</p>
+         </div>
+      </div>
+      <div>
+         To learn more about Ketchikan, Alaska, visit their official website below.
+      </div>
+      <p class="travelsites">
+         <a class="trav-site-link" href="https://www.ktn-ak.us/">Click here!</a>
+      </p>
+      <script>
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+         
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+   </body>
+</html>

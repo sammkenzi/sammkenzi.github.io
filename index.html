@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Index</title>
+      <meta charset="utf-8">
+      <!-- Prevent smartphones from scaling pages down -->
+      <meta name="viewport" content="initial-scale=1">
+      <!-- <link rel="stylesheet" href="medium.css"> -->
+      <!-- Media query for full browser width -->
+      <link rel="stylesheet" media="screen and (min-width: 481px)" href="index_large.css">
+      <!-- Media query for narrow browser width -->
+      <link rel="stylesheet" media="screen and (max-width: 480px)" href="index_small.css">
+      <!-- Adapted from http://www.gt3themes.com/ -->
+   </head>
+   <body>
+      <ul class="nav-bar">
+         <li class="nav-bar-list"><a class="nav-bar-link" href="index.html">Home</a></li>
+         <li class="nav-bar-list"><a class="nav-bar-link" href="page1.html">About Me</a></li>
+         <li class="nav-bar-list">
+            <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Travel Blogs</button>
+               <div id="myDropdown" class="dropdown-content">
+                  <a href="page2.html">Alaska</a>
+                  <a href="page3.html">Russia</a>
+                  <a href="page4.html">Estonia</a>
+                  <a href="page5.html">Jamaica</a>
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="main-header">
+         <h1>Travel Blog</h1>
+         <h2>My adventures traveling the globe.</h2>
+      </div>
+      <p class="intro">
+         I've traveled to many different countries around the world. In this blog, I will document my experiences there. 
+      </p>
+      <div class="box">
+         <div class="card">
+            <img src="imgs/russia.jpg" alt="Russia">
+            <h3>Russia</h3>
+            <p>
+               Russia is a country that borders Asian and European nations. It is a massive country that is usually very cold. I visited St. Petersburg, on the Baltic Sea, in May 2017.
+            </p>
+         </div>
+         <div class="card">
+            <img src="imgs/estonia.jpg" alt="Estonia">
+            <h3>Estonia</h3>
+            <p>
+               Estonia is a country in Northern Europe. It used to be part of the Soviet Union. I visited Tallinn, the country's capitol, in June 2017.
+            </p>
+         </div>
+         <div class="card">
+            <img src="imgs/jamaica.jpg" alt="Jamaica"> 
+            <h3>Jamaica</h3>
+            <p>
+               Jamaica is an island nation located in the Carribean. This country is known for it's rainforests and beaches. I traveled to Ocho Rios in April of 2015.
+            </p>
+         </div>
+         <div class="card">
+            <img src="imgs/alaska.jpg" alt="Alaska"> 
+            <h3>Alaska</h3>
+            <p>
+               Alaska is a North-Western U.S. state known for it's glaciers, mountains, and freezing climate. I visited Ketchikan in May of 2016.
+            </p>
+         </div>
+      </div>
+      <script>
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+         
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Page 1</title>
+      <!-- Prevent smartphones from scaling pages down -->
+      <meta name="viewport" content="initial-scale=1">
+      <!-- <link rel="stylesheet" href="medium.css"> -->
+      <!-- Media query for full browser width -->
+      <link rel="stylesheet" media="screen and (min-width: 481px)" href="page_1_large.css">
+      <!-- Media query for narrow browser width -->
+      <link rel="stylesheet" media="screen and (max-width: 480px)" href="page_1_small.css">
+      <!-- Adapted from http://www.gt3themes.com/ -->
+   </head>
+   <body>
+      <ul class="nav-bar">
+         <li class="nav-bar-list"><a class="nav-bar-link" href="index.html">Home</a></li>
+         <li class="nav-bar-list"><a class="nav-bar-link" href="page1.html">About Me</a></li>
+         <li class="nav-bar-list">
+            <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Travel Blogs</button>
+               <div id="myDropdown" class="dropdown-content">
+                  <a href="page2.html">Alaska</a>
+                  <a href="page3.html">Russia</a>
+                  <a href="page4.html">Estonia</a>
+                  <a href="page5.html">Jamaica</a>
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="main-header">
+         <h1>About Me</h1>
+         <h2>Who I am and Why I Love to Travel</h2>
+      </div>
+      <p class="content">
+         My name is Samantha MacKenzie. I'm currently a college senior at the University of New Hampshire, Manchester. I enjoy traveling in my free time because it enables me to experience new places and cultures. It's not always easy to save up the money and take the time off from work in order to travel. 
+      </p>
+      <p class="subheading">
+         I often travel with family or friends. We usually take a plane or travel via cruise line. I sometimes visit states within the U.S., such as, Florida or Alaska, that I have never been to before. However, what I love most about traveling is visiting far away nations. Some of the different countries I've been to are Russia, Estonia, Finland, Denmark, and Mexico. My goal, for the future is to visit Australia and Southern Europe. 
+      <div>
+         Ever think about traveling yourself? Check out these travel sites!
+      </div>
+      <p class="travelsites">
+         <a class="trav-site-link" href="https://www.travelocity.com/">Travelocity</a>
+         <a class="trav-site-link" href="https://www.expedia.com">Expedia</a>
+      </p>
+      <script>
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+         
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+   </body>
+</html>

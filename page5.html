@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Page 5</title>
+      <meta charset="utf-8">
+      <!-- Prevent smartphones from scaling pages down -->
+      <meta name="viewport" content="initial-scale=1">
+      <!-- <link rel="stylesheet" href="medium.css"> -->
+      <!-- Media query for full browser width -->
+      <link rel="stylesheet" media="screen and (min-width: 481px)" href="large.css">
+      <!-- Media query for narrow browser width -->
+      <link rel="stylesheet" media="screen and (max-width: 480px)" href="small.css">
+      <!-- Adapted from http://www.gt3themes.com/ -->
+      <style> 
+         .main-header {
+         background: url("imgs/jamaicabeach.jpg") no-repeat center; 
+         background-size: cover;
+         }
+      </style>
+   </head>
+   <body>
+      <ul class="nav-bar">
+         <li class="nav-bar-list"><a class="nav-bar-link" href="index.html">Home</a></li>
+         <li class="nav-bar-list"><a class="nav-bar-link" href="page1.html">About Me</a></li>
+         <li class="nav-bar-list">
+            <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Travel Blogs</button>
+               <div id="myDropdown" class="dropdown-content">
+                  <a href="page2.html">Alaska</a>
+                  <a href="page3.html">Russia</a>
+                  <a href="page4.html">Estonia</a>
+                  <a href="page5.html">Jamaica</a>
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="main-header">
+         <h1>Jamaica</h1>
+      </div>
+      <p class="content">
+         I visited Ocho Rios, Jamaica in April of 2015. Jamaica has dense rainforests and beautiful beaches. The landscape of the country is magnificient. However, many of the local residents are very poor and live in shack-like housing on the side of dirt roads. The country generates a lot of it’s money from tourism. It is important, while in Jamaica, to stay with a tour group or in tourist designated areas as much of the country is not safe to outsiders. 
+      </p>
+      <p class="subheading">
+         In Jamaica, we went to Dunn River Falls. Here we climbed a massive waterfall with groups of other tourists. The weather was very hot and sunny. You had to carefully walk on the rocks of the falls because water was gushing down on you. Afterwards, we explored an underground cave. We had to wear hardhats inside of the cave incase something happened to fall on you. It was easy to get lost in the many tunnels of the cave if you didn't stay with the group. Later that day, we rode a ski lift up through the dense forest. The rainforest featured lots of wildlife and fauna. I’ve been to Jamaica three times now and there is always something new to do there.
+      </p>
+      <p class="subheading">
+         If you travel by cruise ship, from the moment you get off the boat, there are local marketplaces that sell souvenirs. Often times, you can barter with the locals on prices which is interesting because you can’t do this in America. The pace of life is also much slower in Jamaica. People don’t rush or worry about things as much as they seem to in New Hampshire. The atmosphere everywhere we went was very laidback and relaxed. 
+      </p>
+      <div class="box">
+         <div class="pictures">
+            <img src="imgs/dunnriverfalls.jpg" alt="dunn river falls">
+            <p>Dunn River Falls</p>
+         </div>
+         <div class="pictures">
+            <img src="imgs/caves.jpg" alt="caves jamaica">
+            <p>Caves in Jamaica</p>
+         </div>
+      </div>
+      <div>
+         To learn more about Ocho Rios, Jamaica, visit the website below.
+      </div>
+      <p class="travelsites">
+         <a class="trav-site-link" href="https://www.tripadvisor.com/Tourism-g147312-Ocho_Rios_Saint_Ann_Parish_Jamaica-Vacations.html">Click here!</a>
+      </p>
+      <script>
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+         
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+   </body>
+</html>

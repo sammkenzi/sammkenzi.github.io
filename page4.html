@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Page 4</title>
+      <meta charset="utf-8">
+      <!-- Prevent smartphones from scaling pages down -->
+      <meta name="viewport" content="initial-scale=1">
+      <!-- <link rel="stylesheet" href="medium.css"> -->
+      <!-- Media query for full browser width -->
+      <link rel="stylesheet" media="screen and (min-width: 481px)" href="large.css">
+      <!-- Media query for narrow browser width -->
+      <link rel="stylesheet" media="screen and (max-width: 480px)" href="small.css">
+      <!-- Adapted from http://www.gt3themes.com/ -->
+      <style> 
+         .main-header {
+         background: url("imgs/tallinn.jpg") no-repeat center; 
+         background-size: cover;
+         }
+      </style>
+   </head>
+   <body>
+      <ul class="nav-bar">
+         <li class="nav-bar-list"><a class="nav-bar-link" href="index.html">Home</a></li>
+         <li class="nav-bar-list"><a class="nav-bar-link" href="page1.html">About Me</a></li>
+         <li class="nav-bar-list">
+            <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Travel Blogs</button>
+               <div id="myDropdown" class="dropdown-content">
+                  <a href="page2.html">Alaska</a>
+                  <a href="page3.html">Russia</a>
+                  <a href="page4.html">Estonia</a>
+                  <a href="page5.html">Jamaica</a>
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="main-header">
+         <h1>Estonia</h1>
+      </div>
+      <p class="content">
+         I visited Tallinn, Estonia with my family via cruise line in June of 2017. I knew virtually nothing about Estonia before I visited the country. It was relatively warm, in Estonia, with the temperature in the low 70s. The landscape of the city was fairly hilly. Tallinn had many open squares with specialty stores and cafes in the Old Town section. When we first arrived at 9am, the city was completely empty. However, as the day went on, crowds of people appeared.  
+      </p>
+      <p class="subheading">
+         We went on a guided tour of the city and saw the Helleman Tower. An old brick tower with red tile on the roof that overlooked the entire city. We also saw many old gates and arches left over from hundreds of years ago. Since Estonia used to part of the Soviet Union, there was a huge Soviet Union monument still in the center of the city reminding the citizens of a darker time. We also visited a massive Russian Orthodox cathedral, called the Alexander Nevsky Cathedral. The design was similar those we saw while in St. Petersburg, Russia. 
+      </p>
+      <p class="subheading">
+         After the tour ended, we stopped at a restaurant that specialized in making savory crepes, called Kompressor. This restarunt had great reviews and was off the beaten path so it did not have a long wait. Afterwards, we went to an Escape Room and got gelato at a local shop. Many places in Europe sell gelato instead of ice cream. Gelato has a more potent and creamier flavor than traditional ice cream. Overall, Tallinn was a beautiful and quaint city on the Baltic Sea that had remnants of old world charm.
+      </p>
+      <div class="box">
+         <div class="pictures">
+            <img src="imgs/tower.jpeg" alt="hellemann tower">
+            <p>Hellemann Tower</p>
+         </div>
+         <div class="pictures">
+            <img src="imgs/downtown.jpg" alt="down town tallinn">
+            <p>Downtown Tallinn</p>
+         </div>
+      </div>
+      <div>
+         To learn more about Tallinn, Estonia, visit the website below.
+      </div>
+      <p class="travelsites">
+         <a class="trav-site-link" href="https://www.tripadvisor.com/Tourism-g274958-Tallinn_Harju_County-Vacations.html">Click here!</a>
+      </p>
+      <script>
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+         
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+   </body>
+</html>

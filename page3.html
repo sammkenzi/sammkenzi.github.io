@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Page 3</title>
+      <meta charset="utf-8">
+      <!-- Prevent smartphones from scaling pages down -->
+      <meta name="viewport" content="initial-scale=1">
+      <!-- <link rel="stylesheet" href="medium.css"> -->
+      <!-- Media query for full browser width -->
+      <link rel="stylesheet" media="screen and (min-width: 481px)" href="large.css">
+      <!-- Media query for narrow browser width -->
+      <link rel="stylesheet" media="screen and (max-width: 480px)" href="small.css">
+      <!-- Adapted from http://www.gt3themes.com/ -->
+      <style> 
+         .main-header {
+         background: url("imgs/russiacity.jpg") no-repeat center; 
+         background-size: cover;
+         }
+      </style>
+   </head>
+   <body>
+      <ul class="nav-bar">
+         <li class="nav-bar-list"><a class="nav-bar-link" href="index.html">Home</a></li>
+         <li class="nav-bar-list"><a class="nav-bar-link" href="page1.html">About Me</a></li>
+         <li class="nav-bar-list">
+            <div class="dropdown">
+               <button onclick="myFunction()" class="dropbtn">Travel Blogs</button>
+               <div id="myDropdown" class="dropdown-content">
+                  <a href="page2.html">Alaska</a>
+                  <a href="page3.html">Russia</a>
+                  <a href="page4.html">Estonia</a>
+                  <a href="page5.html">Jamaica</a>
+               </div>
+            </div>
+         </li>
+      </ul>
+      <div class="main-header">
+         <h1>Russia</h1>
+      </div>
+      <p class="content">
+         In May of 2017, I visited St. Petersburg, Russia with my family. We went on a cruise of the Baltic Sea which brought us to visit Northern European countries. We were in St. Petersburg for two days. Both days were mostly overcast and about 60 degrees. In order to be allowed to enter Russia, you're required to go through security and show your passport to a security officer. You also cannot enter the country unless you are traveling with a tour guide. 
+      </p>
+      <p class="subheading">
+         The tourist atractions in St.Petersburg were beautiful. We visited a series of Russian Orthodox cathedrals, such as, the Church of Spilled Blood.The cathedrals were massive buildings with mosaic art covering the walls and ceilings.
+         We also visited many Russian palaces, such as Catherine the Great's palace, which previously housed the royal families of Russia. These palaces were gold plated and had hundreds of rooms. Many of the rooms featured famous artwork and antique furniture. A lot of the palaces burned down and had to be restored over and over throughout the centuries. 
+      </p>
+      <p class="subheading">
+         The non-tourist areas of St. Peterburg were not as glamourous. Many of the structures, in the city, were made of concrete and were left over from the Soviet Union era. A lot of the citizens lived in run-down apartment buildings and had little money to spare. When you go to Russia, you have to be skeptical of the information your tour guide tells you. The tour guides work for the government of Russian and have to stick to a certain script. Some of the information they told us was clearly propaganda. Overall, visiting Russia was a very interesting experience. I enjoyed visiting the palaces the most. 
+      </p>
+      <div class="box">
+         <div class="pictures">
+            <img src="imgs/catherinepalace.jpg" alt="catherine the great's palace">
+            <p>Catherine the Great's Palace</p>
+         </div>
+         <div class="pictures">
+            <img src="imgs/church.jpg" alt="russian church">
+            <p>Church of Spilled Blood</p>
+         </div>
+      </div>
+      <div>
+         To learn more about St. Petersburg, Russia, visit their website below.
+      </div>
+      <p class="travelsites">
+         <a class="trav-site-link" href="http://www.saint-petersburg.com/">Click here!</a>
+      </p>
+      <script>
+         function myFunction() {
+             document.getElementById("myDropdown").classList.toggle("show");
+         }
+         
+         window.onclick = function(event) {
+           if (!event.target.matches('.dropbtn')) {
+         
+             var dropdowns = document.getElementsByClassName("dropdown-content");
+             var i;
+             for (i = 0; i < dropdowns.length; i++) {
+               var openDropdown = dropdowns[i];
+               if (openDropdown.classList.contains('show')) {
+                 openDropdown.classList.remove('show');
+               }
+             }
+           }
+         }
+      </script>
+   </body>
+</html>
